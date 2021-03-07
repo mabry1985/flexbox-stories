@@ -16,14 +16,14 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
+    "build.watch": "stencil build --watch",
     "start": "stencil build --dev --watch --serve",
-    "dev": "npm run storybook.dev.watch",
+    "dev": "concurrently \"npm:build.watch\" \"npm:storybook\"",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "storybook.dev.watch": "concurrently -c \"cyan,blue,magenta\" \"npm:generate.custom-elements\" \"npm:build.watch\" \"npm:storybook.dev\""
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@stencil/core": "^2.0.1"
