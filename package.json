@@ -17,12 +17,25 @@
   "scripts": {
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
+    "dev": "npm run storybook.dev.watch",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "storybook.dev.watch": "concurrently -c \"cyan,blue,magenta\" \"npm:generate.custom-elements\" \"npm:build.watch\" \"npm:storybook.dev\""
   },
   "dependencies": {
     "@stencil/core": "^2.0.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/html": "^6.1.21",
+    "babel-loader": "^8.2.2",
+    "concurrently": "^6.0.0"
+  }
 }
