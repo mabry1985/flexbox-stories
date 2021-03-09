@@ -17,10 +17,8 @@
 
 .flex-item:nth-child(3n) {
   background: #F7F37C;
-  width: 100%;
 }
 
 .flex-item:nth-child(3n-1) {
   background: #F77CB4;
-  width: 100%;
 }
