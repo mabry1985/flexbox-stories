@@ -27,6 +27,7 @@
 }
 
 ::slotted(*[slot="logo"]) {
+  color: #856E22;
 }
 
 .nav {
@@ -46,7 +47,7 @@
 }
 
 ::slotted(*[slot="nav-links"]) {
-  color: black !important;
+  color: #853E22 !important;
   margin: auto 5px;
 }
 
