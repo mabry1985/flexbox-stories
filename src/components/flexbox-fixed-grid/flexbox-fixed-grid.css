@@ -1,0 +1,28 @@
+:host {
+  /* display: block; */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  /* width: 100%; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+}
+
+.flex-item {
+  display: inline-flex;
+  background: #F7B56A;
+  width: 25%;
+  padding-bottom: 25%; /*Same as width, sets height */
+  margin: 2% 2%; /* (100-25*3)/2 */
+  /* position: relative; */
+}
+
+.flex-item:nth-child(3n) {
+  background: #E06B93;
+}
+
+.flex-item:nth-child(3n-1) {
+  background: #57EFF2;
+}
