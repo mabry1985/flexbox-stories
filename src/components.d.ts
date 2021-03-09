@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface FlexboxAlternatingGrid {
+    }
     interface FlexboxNavBar {
         "isPattern": boolean;
     }
@@ -25,6 +27,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLFlexboxAlternatingGridElement extends Components.FlexboxAlternatingGrid, HTMLStencilElement {
+    }
+    var HTMLFlexboxAlternatingGridElement: {
+        prototype: HTMLFlexboxAlternatingGridElement;
+        new (): HTMLFlexboxAlternatingGridElement;
+    };
     interface HTMLFlexboxNavBarElement extends Components.FlexboxNavBar, HTMLStencilElement {
     }
     var HTMLFlexboxNavBarElement: {
@@ -38,11 +46,14 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "flexbox-alternating-grid": HTMLFlexboxAlternatingGridElement;
         "flexbox-nav-bar": HTMLFlexboxNavBarElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface FlexboxAlternatingGrid {
+    }
     interface FlexboxNavBar {
         "isPattern"?: boolean;
     }
@@ -61,6 +72,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "flexbox-alternating-grid": FlexboxAlternatingGrid;
         "flexbox-nav-bar": FlexboxNavBar;
         "my-component": MyComponent;
     }
@@ -69,6 +81,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "flexbox-alternating-grid": LocalJSX.FlexboxAlternatingGrid & JSXBase.HTMLAttributes<HTMLFlexboxAlternatingGridElement>;
             "flexbox-nav-bar": LocalJSX.FlexboxNavBar & JSXBase.HTMLAttributes<HTMLFlexboxNavBarElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
