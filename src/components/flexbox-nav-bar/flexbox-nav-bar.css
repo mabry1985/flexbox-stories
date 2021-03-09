@@ -3,11 +3,11 @@
 }
 
 :host([isPattern]) .logo {
-  background: #FEC812;
+  background: #FFF357;
 }
 
 :host([isPattern]) .nav {
-  background: #FE5312;
+  background: #FF8A64;
 }
 
 .container {
@@ -17,7 +17,7 @@
 
 .logo {
   align-items: center;
-  border: solid 1px #FEC812;
+  border: solid 1px #FFF357;
   border-radius: 5px 0 0 5px;
   height: 100px;
   justify-content: center;
@@ -31,7 +31,7 @@
 }
 
 .nav {
-  border: solid 1px #FE5312;
+  border: solid 1px #FF8A64;
   border-radius: 0 5px 5px 0;
   align-content: center;
   flex-grow: 1;
