@@ -1,0 +1,54 @@
+:host {
+  display: block;
+}
+
+:host([isPattern]) .logo {
+  background: #FEC812;
+}
+
+:host([isPattern]) .nav {
+  background: #FE5312;
+}
+
+.container {
+  display: flex;
+  padding: 10px;
+}
+
+.logo {
+  align-items: center;
+  border: solid 1px #FEC812;
+  border-radius: 5px 0 0 5px;
+  height: 100px;
+  justify-content: center;
+  margin-right: 4px;
+  width: 120px;
+  display: flex;
+}
+
+::slotted(*[slot="logo"]) {
+}
+
+.nav {
+  border: solid 1px #FE5312;
+  border-radius: 0 5px 5px 0;
+  align-content: center;
+  flex-grow: 1;
+  width: 120px;
+}
+
+.nav-links {
+  display: flex;
+  height: 100px;
+  justify-content: flex-end;
+  margin-right: 10px;
+
+}
+
+::slotted(*[slot="nav-links"]) {
+  color: black !important;
+  margin: auto 5px;
+}
+
+
+
