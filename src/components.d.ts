@@ -17,6 +17,8 @@ export namespace Components {
     interface FlexboxNavBar {
         "isPattern": boolean;
     }
+    interface FlexboxStretch {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -63,6 +65,12 @@ declare global {
         prototype: HTMLFlexboxNavBarElement;
         new (): HTMLFlexboxNavBarElement;
     };
+    interface HTMLFlexboxStretchElement extends Components.FlexboxStretch, HTMLStencilElement {
+    }
+    var HTMLFlexboxStretchElement: {
+        prototype: HTMLFlexboxStretchElement;
+        new (): HTMLFlexboxStretchElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -75,6 +83,7 @@ declare global {
         "flexbox-fixed-grid": HTMLFlexboxFixedGridElement;
         "flexbox-grid": HTMLFlexboxGridElement;
         "flexbox-nav-bar": HTMLFlexboxNavBarElement;
+        "flexbox-stretch": HTMLFlexboxStretchElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -89,6 +98,8 @@ declare namespace LocalJSX {
     }
     interface FlexboxNavBar {
         "isPattern"?: boolean;
+    }
+    interface FlexboxStretch {
     }
     interface MyComponent {
         /**
@@ -110,6 +121,7 @@ declare namespace LocalJSX {
         "flexbox-fixed-grid": FlexboxFixedGrid;
         "flexbox-grid": FlexboxGrid;
         "flexbox-nav-bar": FlexboxNavBar;
+        "flexbox-stretch": FlexboxStretch;
         "my-component": MyComponent;
     }
 }
@@ -122,6 +134,7 @@ declare module "@stencil/core" {
             "flexbox-fixed-grid": LocalJSX.FlexboxFixedGrid & JSXBase.HTMLAttributes<HTMLFlexboxFixedGridElement>;
             "flexbox-grid": LocalJSX.FlexboxGrid & JSXBase.HTMLAttributes<HTMLFlexboxGridElement>;
             "flexbox-nav-bar": LocalJSX.FlexboxNavBar & JSXBase.HTMLAttributes<HTMLFlexboxNavBarElement>;
+            "flexbox-stretch": LocalJSX.FlexboxStretch & JSXBase.HTMLAttributes<HTMLFlexboxStretchElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
