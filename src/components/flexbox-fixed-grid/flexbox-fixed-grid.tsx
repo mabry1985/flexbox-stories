@@ -10,16 +10,17 @@ export class FlexboxFixedGrid {
   render() {
     return (
       <Host>
-        <div class="container" />
-        <div class="flex-item" />
-        <div class="flex-item" />
-        <div class="flex-item" />
-        <div class="flex-item" />
-        <div class="flex-item" />
-        <div class="flex-item" />
-        <div class="flex-item" />
-        <div class="flex-item" />
-        <div class="flex-item" />
+        <div class="container">
+          <div class="flex-item" />
+          <div class="flex-item" />
+          <div class="flex-item" />
+          <div class="flex-item" />
+          <div class="flex-item" />
+          <div class="flex-item" />
+          <div class="flex-item" />
+          <div class="flex-item" />
+          <div class="flex-item" />
+        </div>
       </Host>
     );
   }

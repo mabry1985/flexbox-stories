@@ -1,22 +1,17 @@
 :host {
-  /* display: block; */
+  display: block;
 }
 
 .container {
   display: flex;
-  flex-direction: row;
-  /* width: 100%; */
-  /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
+  flex-wrap: wrap;
 }
 
 .flex-item {
-  display: inline-flex;
   background: #F7B56A;
-  width: 25%;
-  padding-bottom: 25%; /*Same as width, sets height */
-  margin: 2% 2%; /* (100-25*3)/2 */
-  /* position: relative; */
+  width: 29%;
+  padding-bottom: 29%;
+  margin: 2% 2%;
 }
 
 .flex-item:nth-child(3n) {
