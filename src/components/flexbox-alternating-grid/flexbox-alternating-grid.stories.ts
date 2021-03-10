@@ -4,5 +4,26 @@ export default {
 };
 
 export const FlexboxAlternatingGrid = () => {
-  return `<flexbox-alternating-grid></flexbox-alternating-grid>`;
+  return `
+    <flexbox-alternating-grid></flexbox-alternating-grid>
+    <code-block>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .flex-item {
+        background: #729BF7;
+        width: 48%;
+        height: 100px;
+        margin-bottom: 2%;
+    }
+
+    .flex-item:nth-child(3n) {
+        background: #E7F772;
+        width: 100%;
+    }
+    </code-block>
+    `;
 };

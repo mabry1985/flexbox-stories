@@ -4,5 +4,26 @@ export default {
 };
 
 export const FlexboxAlternatingAlignment = () => {
-  return `<flexbox-alternating-alignment></flexbox-alternating-alignment>`;
+  return `
+    <flexbox-alternating-alignment></flexbox-alternating-alignment>
+    <code-block>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            height: 400px;
+        }
+
+        .flex-item {
+            align-self: flex-start;
+            background: #B173FF;
+            flex-grow: 1;
+            height: 50%;
+        }
+
+        .flex-item:nth-child(odd) {
+            align-self: flex-end;
+            background: #60EB52;
+        }    
+    </code-block>
+    `;
 };
