@@ -9,7 +9,6 @@ export const FlexboxAlternatingAlignment = () => {
     <code-block>
         .container {
             display: flex;
-            flex-wrap: wrap;
             height: 400px;
         }
 
