@@ -12,10 +12,10 @@ export class FlexboxNavBar {
     return (
       <Host>
         <div class="container">
-          <div class="logo" >
+          <div class="logo-container" >
             <slot name="logo" />
           </div>
-          <div class="nav" >
+          <div class="nav-container" >
             <div class="nav-links">
               <slot name="nav-links" />
             </div>

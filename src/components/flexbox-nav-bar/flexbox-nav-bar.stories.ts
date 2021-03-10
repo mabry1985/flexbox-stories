@@ -18,21 +18,21 @@ export const FlexboxNavbar = () => {
                 padding: 10px;
             }
 
-            .logo {
+            .logo-container {
                 align-items: center;
                 border: solid 1px #FFF357;
                 border-radius: 5px 0 0 5px;
+                display: flex;
                 height: 100px;
                 justify-content: center;
                 margin-right: 4px;
                 width: 120px;
-                display: flex;
             }
  
-            .nav {
+            .nav-container {
+                align-content: center;
                 border: solid 1px #FF8A64;
                 border-radius: 0 5px 5px 0;
-                align-content: center;
                 flex-grow: 1;
                 width: 120px;
             }
@@ -42,7 +42,6 @@ export const FlexboxNavbar = () => {
                 height: 100px;
                 justify-content: flex-end;
                 margin-right: 15px;
-
             }
         </code-block>
         `;

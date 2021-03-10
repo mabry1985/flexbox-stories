@@ -17,7 +17,7 @@ export const FlexboxGrid = () => {
             background: #77ED9C;
             flex: 0 32%;
             height: 100px;
-            margin-bottom: 2%; /* (100-32*3)/2 */
+            margin-bottom: 2%;
         }
 
         .flex-item:nth-child(3n) {

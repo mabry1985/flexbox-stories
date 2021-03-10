@@ -15,9 +15,9 @@ export const FlexboxAlternatingGrid = () => {
 
     .flex-item {
         background: #729BF7;
-        width: 48%;
         height: 100px;
         margin-bottom: 2%;
+        width: 48%;
     }
 
     .flex-item:nth-child(3n) {

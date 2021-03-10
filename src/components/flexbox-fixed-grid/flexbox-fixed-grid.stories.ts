@@ -14,9 +14,9 @@ export const FlexboxFixedGrid = () => {
 
         .flex-item {
             background: #F7B56A;
-            width: 29%;
             padding-bottom: 29%; /* A hack to set height */
             margin: 2% 2%;
+            width: 29%;
         }
 
         .flex-item:nth-child(3n) {
