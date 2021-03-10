@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CodeBlock {
+    }
     interface FlexboxAlternatingAlignment {
     }
     interface FlexboxAlternatingGrid {
@@ -35,6 +37,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCodeBlockElement extends Components.CodeBlock, HTMLStencilElement {
+    }
+    var HTMLCodeBlockElement: {
+        prototype: HTMLCodeBlockElement;
+        new (): HTMLCodeBlockElement;
+    };
     interface HTMLFlexboxAlternatingAlignmentElement extends Components.FlexboxAlternatingAlignment, HTMLStencilElement {
     }
     var HTMLFlexboxAlternatingAlignmentElement: {
@@ -78,6 +86,7 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "code-block": HTMLCodeBlockElement;
         "flexbox-alternating-alignment": HTMLFlexboxAlternatingAlignmentElement;
         "flexbox-alternating-grid": HTMLFlexboxAlternatingGridElement;
         "flexbox-fixed-grid": HTMLFlexboxFixedGridElement;
@@ -88,6 +97,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface CodeBlock {
+    }
     interface FlexboxAlternatingAlignment {
     }
     interface FlexboxAlternatingGrid {
@@ -116,6 +127,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "code-block": CodeBlock;
         "flexbox-alternating-alignment": FlexboxAlternatingAlignment;
         "flexbox-alternating-grid": FlexboxAlternatingGrid;
         "flexbox-fixed-grid": FlexboxFixedGrid;
@@ -129,6 +141,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "code-block": LocalJSX.CodeBlock & JSXBase.HTMLAttributes<HTMLCodeBlockElement>;
             "flexbox-alternating-alignment": LocalJSX.FlexboxAlternatingAlignment & JSXBase.HTMLAttributes<HTMLFlexboxAlternatingAlignmentElement>;
             "flexbox-alternating-grid": LocalJSX.FlexboxAlternatingGrid & JSXBase.HTMLAttributes<HTMLFlexboxAlternatingGridElement>;
             "flexbox-fixed-grid": LocalJSX.FlexboxFixedGrid & JSXBase.HTMLAttributes<HTMLFlexboxFixedGridElement>;
